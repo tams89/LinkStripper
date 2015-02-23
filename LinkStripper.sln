@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "LinkStripper", "WasEDoing\LinkStripper.fsproj", "{CD75A737-9C16-48F8-924D-42571AF92691}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "LinkStripper", "LinkStipper\LinkStripper.fsproj", "{CD75A737-9C16-48F8-924D-42571AF92691}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

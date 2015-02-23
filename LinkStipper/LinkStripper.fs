@@ -12,7 +12,7 @@ module LinkStripper =
         let wb = new WebClient()
         let html = wb.DownloadString(url : string)
         let parseLinks = Regex.Matches(html, "href\\s*=\\s*(?:[\"'](?<1>[^\"']*)[\"']|(?<1>\\S+))")
-        [ for m in parseLinks -> m.Value]
+        [ for m in parseLinks -> m.Value.Replace("href=", "") ]
 
     // Example execution
     let saveLinksToFile =
@@ -29,4 +29,4 @@ module LinkStripper =
             let strippedLinks = getHtml link
             let path = path Environment.SpecialFolder.Desktop + "\\ExtractedLinks.txt"
             File.WriteAllLines(path, (getHtml link))
-            printfn "Links extracted and saved to %A" path
+            printfn "Links extracted from %A and saved to %A" link path
